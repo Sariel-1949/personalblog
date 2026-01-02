@@ -1,0 +1,62 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "New Campaign!",
+      "content": "Great news! The overlords at Games Workshop have finally decided to grace us with a new campaign. Fellow Warhammer fans, let me introduce: <a href=\"https://www.warhammer.com/en-GB/other-games-necromunda-lp\" class=\"float-link\">NECROMUNDA</a>. <br><br>Necromunda portrays the battle for survival on a hive city deep in imperial territory. Players control rival gangs of fighters who battle it out for supremacy in a three-dimensional landscape of ruined buildings laid out on a tabletop. Games are quick but challenging. Necromunda is an industrial planet of vast factories consisting of layer upon layer; known as the Hive. The game itself is set in the dark and desolate underworld; known as the Underhive. The Underhive is the collective name for those areas which once have long since fallen into disrepair. <br><br>The cities and factories here are decrepit and dangerous. The Underhive contains all manner of treasure to fight over; including precious metals and ancient technological devices. Lurking amongst the ruins and passageways are mutated creatures, renegades, killers and opportunists. <br><br>A game can last as little as 20 minutes, so you try many different scenarios in the one evening. There are campaign rules so your new recruit can rise through the ranks to perhaps lead his or her own gang. The rules are published by Games Workshop. They are based on Warhammer 40k, but at a skirmish level.",
+
+      "author": "Warhammer Enthusiast",
+      "date": "2026-01-01",
+      "category": "Campaign Books"
+    },
+    {
+      "id": 2,
+      "title": "Black Library Update",
+      "content": "To the surprise of no one GW still refuse to publish more lore related to The War in Heaven nor The Dark Age of Technology. Instead, they added another book to the ever-growing pile called the Horus Heresy series. I however, will still be reading it.",
+      "author": "Lore Nerd",
+      "date": "2025-12-28",
+      "category": "Black Library"
+    },
+    {
+      "id": 3,
+      "title": "Fan Theory Finally Confirmed?",
+      "content": "Excitement brews in the Warhammer community as one of the recent additions to the Black Library contained a story featuring a description of a figure surprisingly similar to that of the missing primarch <a href=\"https://warhammer40k.fandom.com/wiki/Corvus_Corax\" class=\"float-link\">Corvus Corax</a> — fans believe this to be confirmation for many of the theories they held about his whereabouts.",
+      "author": "Community Insider",
+      "date": "2025-12-20",
+      "category": "Black Library"
+    },
+    {
+      "id": 4,
+      "title": "New Cover Art for the Reprint of the Codex Astartes",
+      "content": "The reprint of the Ultramarine battle tome announced by Games Workshop last week is set to feature new cover art and illustrations drawn by the talented Satyaki Sarkar.",
+      "author": "Art Collector",
+      "date": "2025-12-15",
+      "category": "Faction Codexes"
+    }
+  ],
+  "userData": {
+    "id": 1,
+    "username": "WarhammerFan123",
+    "avatar": "https://via.placeholder.com/40?text=WF",
+    "bio": "Long-time Warhammer 40k enthusiast and collector of Black Library novels.",
+    "email": "warhammer.fan@example.com"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 1,
+      "content": "Necromunda is such a fun skirmish game! Can't wait to try the new campaign.",
+      "author": "WarhammerFan123",
+      "date": "2026-01-01T14:30:00"
+    },
+    {
+      "id": 2,
+      "postId": 3,
+      "userId": 1,
+      "content": "Corax's return has been rumored for years — so excited this might be confirmed!",
+      "author": "WarhammerFan123",
+      "date": "2025-12-21T09:15:00"
+    }
+  ]
+}

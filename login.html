@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page </title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*base styles  */
+        .form-container { max-width: 400px; margin: 2rem auto; padding: 2rem; border: 1px solid #ddd; }
+        .form-group { margin: 1rem 0; }
+        input { margin-top: 0.5rem; padding: 0.6rem; width: 100%; box-sizing: border-box; }
+        .error { color: red; font-size: 0.85rem; margin-top: 0.3rem; display: none; }
+        .invalid { border-color: red; }
+        .float-link { margin-top: 0.5rem; display: inline-block; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <form id="loginForm" action="index.html" method="get">
+        <h1>LOGIN PAGE </h1>
+
+        <div class="form-group">
+            <label for="userEmail"> Username/email </label>
+            <input type="text" name="userEmail" id="userEmail" placeholder="name or email" required>
+            <div id="userEmailError" class="error"></div> <!-- Error container -->
+        </div>
+
+        <div class="form-group">
+            <label for="pword">Password </label>
+            <input type="password" name="password" id="pword" placeholder="password" required>
+            <div id="pwordError" class="error"></div> <!-- Error container -->
+        </div>
+
+        <div class="form-group">
+            <label for="remember-me"> Remember me </label>
+            <input type="checkbox" name="remember-me" id="remember-me" class="float-link">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" name="MainBlogpage" id="sub" class="float-link" value="Submit">
+        </div>
+
+        <!--  Clear Saved Data Button -->
+        <button type="button" id="clear-saved-data" class="float-link" style="width: 100%; padding: 0.6rem; margin-top: 1rem;">
+            Clear Saved Data
+        </button>
+
+        <a href="registration.html" class="float-link"> don't have an account?</a>
+    </form>
+</div>
+
+<!-- Theme Toggle (all pages) -->
+<div class="theme-toggle-container" style="position: fixed; top: 1rem; right: 1rem;">
+    <span id="theme-label">Dark Mode</span>
+    <div id="theme-toggle"></div>
+</div>
+
+<!--  Saved Notification -->
+<div class="saved-notification" id="saved-notification">Saved!</div>
+
+<script src="jss/jss.js"></script>
+</body>
+</html>

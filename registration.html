@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*  base styles  */
+        .form-container { max-width: 400px; margin: 2rem auto; padding: 2rem; border: 1px solid #ddd; }
+        label { display: block; margin: 0.8rem 0; }
+        input { margin-left: 0.5rem; padding: 0.6rem; width: calc(100% - 1rem); box-sizing: border-box; }
+        .error { color: red; font-size: 0.85rem; margin-top: 0.3rem; display: none; }
+        .success { color: green; font-size: 0.9rem; margin: 1rem 0; display: none; }
+        .invalid { border-color: red; }
+        .float-link { margin-top: 0.5rem; display: inline-block; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <form id="registrationForm" action="index.html" method="post">
+        <h1>Registration Page</h1>
+
+        <!-- Full Name -->
+        <label for="name">
+            Full Name
+            <input type="text" name="fullName" id="name" placeholder="Enter full name">
+        </label>
+        <div id="nameError" class="error"></div>
+
+        <!-- Email -->
+        <label for="email">
+            Email Address
+            <input type="text" name="email" id="email" placeholder="Enter email">
+        </label>
+        <div id="emailError" class="error"></div>
+
+        <!-- Username -->
+        <label for="username">
+            Username
+            <input type="text" name="username" id="username" placeholder="Create username">
+        </label>
+        <div id="usernameError" class="error"></div>
+
+        <!-- Password -->
+        <label for="password">
+            Password
+            <input type="password" name="password" id="password" placeholder="Min 6 characters">
+        </label>
+        <div id="passwordError" class="error"></div>
+
+        <!-- Confirm Password -->
+        <label for="confirmPassword">
+            Confirm Password
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Re-enter password">
+        </label>
+        <div id="confirmPasswordError" class="error"></div>
+
+        <!-- Buttons -->
+        <input type="submit" name="submit" id="button" class="float-link" value="REGISTER">
+        <input type="button" id="clearFormBtn" class="float-link" value="Clear Form" style="margin-left: 1rem;">
+
+        <!-- Clear Saved Data Button -->
+        <button type="button" id="clear-saved-data" class="float-link" style="width: 100%; padding: 0.6rem; margin-top: 1rem; margin-left: 0;">
+            Clear Saved Data
+        </button>
+
+        <!-- Success/Error Messages -->
+        <div id="registrationSuccess" class="success"></div>
+
+        <a href="login.html" class="float-link"> Cancel Registration</a>
+    </form>
+</div>
+
+<!-- Theme Toggle (all pages) -->
+<div class="theme-toggle-container" style="position: fixed; top: 1rem; right: 1rem;">
+    <span id="theme-label">Dark Mode</span>
+    <div id="theme-toggle"></div>
+</div>
+
+<!-- Saved Notification -->
+<div class="saved-notification" id="saved-notification">Saved!</div>
+
+<script src="jss/jss.js"></script>
+</body>
+</html>

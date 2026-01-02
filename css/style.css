@@ -1,0 +1,680 @@
+/* BASE STYLES (ALL DEVICES) */
+
+body {
+    font-family: Black Ops One, sans-serif;
+    background-color: #0A0A0A;
+    color: #F5F5F0;
+    margin: 0; /* Reset default body margin */
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0A0A0A;
+    padding: 1rem; /* Add padding for mobile */
+    border-bottom: 1px solid #D0D0D0; /* Visual separation */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth theme transition */
+}
+
+h1, h2 {
+    font-family: Inter, sans-serif;
+    color: #9D2933; /* IMPERIAL RED */
+    margin: 0.5rem 0; /* Tighten margins */
+    transition: color 0.3s ease; /* Smooth theme transition */
+}
+
+h1 {
+    font-size: 1.8rem; /* Base heading size */
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+#cpinfo {
+    color: orange;
+    font-size: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#blog-sidebar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.float-link {
+    color: #165dff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 2px 0;
+}
+
+.float-link:hover {
+    color: #0a47e0;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(22, 93, 255, 0.15);
+}
+
+/* Base content layout (flex) */
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: auto;
+    box-sizing: border-box; /* Ensure padding doesn’t break width */
+}
+
+.main-content {
+    flex: 1;
+}
+
+.side-bar {
+    width: 300px;
+    padding: 1.5rem;
+    background-color: #0A0A0A;
+    border: 2px solid #D0D0D0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth theme transition */
+}
+
+/* Featured blog post */
+#featblog {
+    background-image: url("../images/img2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px; /* Base height */
+    padding: 2rem;
+    margin-bottom: 2rem; /* Space below featured post */
+    box-sizing: border-box;
+    border-radius: 8px; /* Soften edges */
+    transition: background-image 0.3s ease; /* Smooth image transition */
+}
+
+/* Header nav links (base) */
+header nav {
+    display: flex;
+    gap: 1rem; /* Space between links */
+    flex-wrap: wrap; /* Wrap links on small screens */
+    margin-top: 1rem;
+    align-items: center;
+}
+
+/* Form styles (base) */
+.side-bar form {
+    margin-bottom: 1.5rem;
+}
+
+.side-bar input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background-color: #222;
+    border: 1px solid #D0D0D0;
+    color: #F5F5F0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.side-bar button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #9D2933;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.side-bar button:hover {
+    background-color: #7a1f28;
+}
+
+/* Footer styles (base) */
+footer {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #D0D0D0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+footer nav {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/*  Theme Toggle Styles */
+.theme-toggle-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #9D2933;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle.light-mode::after {
+    transform: translateX(20px);
+    background-color: #F5F5F0;
+}
+
+/*  Light Mode Styles */
+body.light-mode {
+    background-color: #F5F5F0;
+    color: #0A0A0A;
+}
+
+header.light-mode {
+    background-color: #F5F5F0;
+    border-bottom-color: #222;
+}
+
+.side-bar.light-mode {
+    background-color: #F5F5F0;
+    border-color: #222;
+}
+
+footer.light-mode {
+    background-color: #F5F5F0;
+    border-top-color: #222;
+}
+
+#featblog.light-mode {
+    background-image: url("../images/img1.jpg");
+}
+
+.side-bar input.light-mode {
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+    border-color: #222;
+}
+
+/*Font Size Controls */
+.font-size-controls {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.font-size-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #9D2933;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.font-size-btn:hover {
+    background-color: #7a1f28;
+}
+
+.font-size-btn.active {
+    background-color: #165dff;
+}
+
+/* NEW: Saved Notification */
+.saved-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    background-color: #155724;
+    color: #d4edda;
+    border-radius: 4px;
+    display: none;
+    z-index: 1001;
+    transition: display 0.3s ease;
+}
+
+/*  Clear Saved Data Button */
+#clear-saved-data {
+    margin-top: 1rem;
+    background-color: #ff4500;
+}
+
+#clear-saved-data:hover {
+    background-color: #cc3700;
+}
+
+/* Active nav link style (for JS to apply) */
+.nav-active {
+    font-weight: bold;
+    color: #c90000; /* GW-inspired red for emphasis  */
+    transition: color 0.3s ease;
+}
+
+body.light-mode .nav-active {
+    color: #7a1f28;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #c90000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+body.light-mode #back-to-top {
+    background-color: #9D2933;
+}
+
+/* Message styles */
+#welcome-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+    font-family: 'Inter', sans-serif;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* NEW: Loading Spinner (replaces old loading message) */
+.loading-spinner {
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    display: none;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 1rem;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #9D2933;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* NEW: API Error Message */
+.api-error {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: #f8d7da;
+    color: #721c24;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.refresh-btn, .view-comments-btn, .submit-comment-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #9D2933;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.refresh-btn:hover, .view-comments-btn:hover, .submit-comment-btn:hover {
+    background-color: #7a1f28;
+}
+
+/* NEW: User Profile Styles */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #222;
+}
+
+body.light-mode .user-profile {
+    background-color: #e9ecef;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-username {
+    font-weight: bold;
+    color: #9D2933;
+}
+
+.user-bio {
+    font-size: 0.8rem;
+    margin: 0 0 0 0.5rem;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* NEW: Recent Posts & Comments Styles */
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.recent-posts article {
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #222;
+    transition: background-color 0.3s ease;
+}
+
+body.light-mode .recent-posts article {
+    background-color: #e9ecef;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+body.light-mode .post-meta {
+    color: #555;
+}
+
+.view-comments-btn {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+}
+
+.post-comments {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.comment-card {
+    padding: 0.8rem;
+    border-radius: 4px;
+    background-color: #222;
+}
+
+body.light-mode .comment-card {
+    background-color: #e9ecef;
+}
+
+.comment-meta {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+body.light-mode .comment-meta {
+    color: #555;
+}
+
+/* NEW: Comment Modal Styles */
+.comment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light-mode .comment-modal {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.comment-modal-content {
+    background-color: #0A0A0A;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+body.light-mode .comment-modal-content {
+    background-color: #F5F5F0;
+}
+
+.comment-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #F5F5F0;
+}
+
+body.light-mode .comment-modal-close {
+    color: #0A0A0A;
+}
+
+#new-comment-content {
+    width: 100%;
+    height: 100px;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    background-color: #222;
+    border: 1px solid #D0D0D0;
+    color: #F5F5F0;
+    border-radius: 4px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+body.light-mode #new-comment-content {
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+    border-color: #222;
+}
+
+.comment-error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* MOBILE (MAX-WIDTH: 767px) */
+
+@media (max-width: 767px) {
+    /* Stack content vertically (main + sidebar) */
+    .content {
+        flex-direction: column;
+        gap: 1.5rem; /* Smaller gap */
+        padding: 0.5rem; /* Less padding */
+    }
+
+    /* Sidebar full width on mobile */
+    .side-bar {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Reduce featured blog height for mobile */
+    #featblog {
+        min-height: 250px; /* Shorter image */
+        padding: 1.5rem; /* Less padding */
+    }
+
+    /* Smaller text on mobile */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3, h4 {
+        font-size: 1rem;
+    }
+
+    /* Wrap header nav links fully */
+    header nav {
+        gap: 0.5rem;
+    }
+
+    /* Smaller padding for footer */
+    footer {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Smaller form inputs */
+    .side-bar input, .side-bar button {
+        padding: 0.6rem;
+    }
+
+    /* NEW: Mobile theme toggle adjustment */
+    .theme-toggle-container {
+        position: static;
+        margin-top: 1rem;
+        justify-content: flex-end;
+    }
+
+    /* NEW: Mobile user profile */
+    .user-profile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+
+    .user-bio {
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+/* TABLET (768px - 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Adjust content gap */
+    .content {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* Reduce sidebar width for tablet */
+    .side-bar {
+        width: 250px; /* Narrower than desktop */
+        padding: 1.2rem;
+    }
+
+    /* Slightly reduce featured blog height */
+    #featblog {
+        min-height: 350px;
+        padding: 1.8rem;
+    }
+
+    /* Medium text size for tablet */
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* DESKTOP (MIN-WIDTH: 1024px) */
+
+@media (min-width: 1024px) {
+    /* Optimize desktop spacing */
+    .content {
+        padding: 1.5rem;
+    }
+
+    /* Ensure main content has maximum width */
+    .main-content {
+        max-width: calc(100% - 320px);
+    }
+
+    /* Slightly larger featured blog height */
+    #featblog {
+        min-height: 450px;
+    }
+
+    /* Larger text for desktop */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3, h4 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Games Workshop News</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Ops+One|Inter|sans-serif">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Games Workshop News</h1>
+    <p>Best place to stay updated on all Games Workshop related news</p>
+
+    <!-- Theme Toggle  -->
+    <div class="theme-toggle-container">
+        <span id="theme-label">Dark Mode</span>
+        <div id="theme-toggle"></div>
+    </div>
+
+    <nav id="main-nav">
+        <a href="/home" class="float-link" data-path="/home">Home</a>
+        <a href="/about" class="float-link" data-path="/about">About</a>
+        <a href="/post" class="float-link" data-path="/post">Posts</a>
+        <a href="/Contact" class="float-link" data-path="/Contact">Contact</a>
+        <a href="login.html" class="float-link" id="logout-link">Logout</a>
+        <!-- User Profile (dynamic, hidden by default) -->
+        <div id="user-profile" class="user-profile" style="display: none;">
+            <img id="user-avatar" src="" alt="User Avatar" class="user-avatar">
+            <span id="user-username"></span>
+            <p id="user-bio" class="user-bio"></p>
+        </div>
+    </nav>
+</header>
+
+<!-- Loading Spinner (improved from original loading message) -->
+<div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Loading data...</p>
+</div>
+
+<!-- Error Message (for API failures) -->
+<div id="api-error" class="api-error" style="display: none;">
+    <p>Failed to load data. Please try again.</p>
+    <button id="refresh-data" class="refresh-btn">Refresh</button>
+</div>
+
+<!-- Welcome Message -->
+<div id="welcome-message">Welcome to Games Workshop News - Your go-to source for Warhammer updates!</div>
+
+<!--  Font Size Controls  -->
+<div class="font-size-controls">
+    <button class="font-size-btn" data-font-size="small">Small</button>
+    <button class="font-size-btn" data-font-size="medium">Medium</button>
+    <button class="font-size-btn" data-font-size="large">Large</button>
+</div>
+
+<div class="content">
+    <main class="main-content" id="main-content">
+        <!-- Featured Blog Post (dynamic) -->
+        <article id="featblog"></article>
+
+        <!-- Recent Posts (dynamic) -->
+        <h3>Recent Posts</h3>
+        <div id="recent-posts" class="recent-posts"></div>
+    </main>
+
+    <aside class="side-bar">
+        <h4>Search</h4>
+        <form action="/search-results" method="get">
+            <input type="text" name="search" required placeholder="Search here">
+            <button type="submit">Submit</button>
+        </form>
+
+        <h4>Categories</h4>
+        <ul>
+            <li>Campaign Books</li>
+            <li>Black Library</li>
+            <li>Figures</li>
+            <li>Faction Codexes</li>
+        </ul>
+
+        <h4>Recent Comments</h4>
+        <div id="recent-comments">
+            <p>No comments yet</p>
+        </div>
+    </aside>
+</div>
+
+<!-- Comment Modal (for viewing/adding comments) -->
+<div id="comment-modal" class="comment-modal" style="display: none;">
+    <div class="comment-modal-content">
+        <span class="comment-modal-close">&times;</span>
+        <h3 id="modal-post-title"></h3>
+        <div id="modal-loading" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading comments...</p>
+        </div>
+        <div id="modal-error" class="api-error" style="display: none;">
+            <p>Failed to load comments.</p>
+        </div>
+        <div id="post-comments" class="post-comments"></div>
+        <h4>Add a Comment</h4>
+        <textarea id="new-comment-content" placeholder="Write your comment here..." required></textarea>
+        <button id="submit-comment" class="submit-comment-btn">Submit Comment</button>
+        <p id="comment-submit-error" class="comment-error" style="display: none;">Failed to submit comment. Please try again.</p>
+    </div>
+</div>
+
+<footer>
+    <p id="cpinfo">GW, Games Workshop, Citadel, White Dwarf, Space Marine, 40K, Warhammer, Warhammer
+        40,000, the ‘Aquila’ Double-headed Eagle logo, Warhammer Age of Sigmar, Battletome,
+        Stormcast Eternals, and all associated logos, illustrations, images, names, creatures,
+        races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof,
+        are either ® or ™, and/or © Games Workshop Limited, variably registered around the world.
+        All Rights Reserved.</p>
+    <nav>
+        <a href="/faq" class="float-link">FAQ</a>
+        <a href="/up" class="float-link">UPLOAD CONTENT</a>
+    </nav>
+</footer>
+
+<!-- Back to Top Button  -->
+<button id="back-to-top">Back to Top</button>
+
+<!-- Saved Notification  -->
+<div class="saved-notification" id="saved-notification">Saved!</div>
+
+<script src="jss/jss.js"></script> <!-- Renamed from jss/jss.js for consistency -->
+</body>
+</html>
