@@ -184,8 +184,8 @@ if (document.getElementById('registrationForm')) {
 
 
 // API Configuration & Helpers
-
-const API_URL = '/data/api/mock-data.json';
+// Replace the existing API_URL line with this:
+const API_URL = "https://sariel-1949.github.io/personalblog/data/api/mock-data.json";
 let mockData = null; // Cached mock API data (persists across calls)
 
 // Safe element show/hide (prevents null errors)
