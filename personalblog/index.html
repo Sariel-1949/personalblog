@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>personal webpage </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Ops+One|Inter|sans-serif">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>techy title or something </h1>
+    <p>sub title for subtitle stuff</p>
+
+
+
+    <nav id="main-nav">
+        <a href="/home" class="float-link" data-path="/home">Home</a>
+        <a href="/about" class="float-link" data-path="/about">About</a>
+        <a href="/post" class="float-link" data-path="/post">Posts</a>
+        <a href="/Contact" class="float-link" data-path="/Contact">Contact</a>
+        <!-- User Profile (dynamic, hidden by default) -->
+        <div id="user-profile" class="user-profile" style="display: none;">
+            <img id="user-avatar" src="" alt="User Avatar" class="user-avatar">
+            <span id="user-username"></span>
+            <p id="user-bio" class="user-bio"></p>
+        </div>
+    </nav>
+</header>
+
+<!-- Loading Spinner (improved from original loading message) -->
+<div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Loading data...</p>
+</div>
+
+<!-- Error Message (for API failures) -->
+<div id="api-error" class="api-error" style="display: none;">
+    <p>Failed to load data. Please try again.</p>
+    <button id="refresh-data" class="refresh-btn">Refresh</button>
+</div>
+
+<!-- Welcome Message -->
+<div id="welcome-message">welcome banner that temporarily displays</div>
+
+
+
+<div class="content">
+    <main class="main-content" id="main-content">
+        <!-- Featured Blog Post (dynamic) -->
+        <article ><p> main body</p></article>
+    </main>
+
+    <aside class="side-bar">
+
+
+        <h4>aside</h4>
+        <ul>
+            <li>education?</li>
+            <li>experience?</li>
+            <li>projects?</li>
+            <li>tech stack</li>
+        </ul>
+
+
+    </aside>
+</div>
+
+
+<footer>
+    <p id="cpinfo">probably have some contact info here</p>
+    <nav>
+        <a href="/faq" class="float-link">FAQ</a>
+        <a href="/up" class="float-link">UPLOAD CONTENT</a>
+    </nav>
+</footer>
+
+<!-- Back to Top Button  -->
+<button id="back-to-top">Back to Top</button>
+
+<!-- Saved Notification  -->
+<div class="saved-notification" id="saved-notification">Saved!</div>
+
+<script src="jss/jss.js"></script> <!-- Renamed from jss/jss.js for consistency -->
+</body>
+</html>
